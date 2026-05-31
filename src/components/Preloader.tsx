@@ -27,8 +27,8 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         { opacity: 0, scale: 0.95 },
         { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
       )
-      // Wait for the video to play out
-      .to({}, { duration: 3.5 })
+      // Wait for the video to play out (10 seconds total)
+      .to({}, { duration: 9.5 })
       // Smooth fade out for the video phase
       .to(videoContainer.current, { opacity: 0, duration: 0.8, ease: "power2.inOut" });
 
