@@ -5,17 +5,15 @@ import transportImg from "@/assets/sector-transport.jpg";
 import waterImg from "@/assets/sector-water.jpg";
 import resourcesImg from "@/assets/sector-resources.jpg";
 import socialImg from "@/assets/sector-social.jpg";
-import defenceImg from "@/assets/sector-defence.jpg";
-import railImg from "@/assets/sector-rail.jpg";
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const sectors = [
-  { title: "Transport & Roads", image: transportImg, href: "/sectors#transport" },
+  { title: "Transport & Civil Infrastructure", image: transportImg, href: "/sectors#transport" },
   { title: "Water & Utilities", image: waterImg, href: "/sectors#water" },
-  { title: "Resources & Energy", image: resourcesImg, href: "/sectors#resources" },
-  { title: "Social Infrastructure", image: socialImg, href: "/sectors#social" },
-  { title: "Defence", image: defenceImg, href: "/sectors#defence" },
-  { title: "Urban Rail", image: railImg, href: "/sectors#urban-rail" },
+  { title: "Energy, Resources & Industrial", image: resourcesImg, href: "/sectors#energy-resources" },
+  { title: "Built Environment & Property", image: socialImg, href: "/sectors#built-environment" },
+  { title: "Major Capital Programs", image: transportImg, href: "/sectors#capital-programs" },
 ];
 
 const SectorsSection = () => {

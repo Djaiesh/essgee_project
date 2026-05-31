@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import { MagneticButton } from "./MagneticButton";
 
 interface SubItem {
   label: string;
@@ -15,43 +16,44 @@ interface NavItem {
 }
 
 const NAV_LINKS: NavItem[] = [
-  { label: "Origin", href: "/#origin" },
+  { label: "Leadership", href: "/#about" },
   {
     label: "Capabilities",
     href: "/capabilities",
     subs: [
-      { label: "Project Management", href: "/capabilities#project-management" },
-      { label: "Risk & Governance", href: "/capabilities#risk-governance" },
-      { label: "Contract Administration", href: "/capabilities#contract-admin" },
-      { label: "Cost & Schedule", href: "/capabilities#cost-schedule" },
+      { label: "Governance & Assurance", href: "/capabilities#governance-assurance" },
+      { label: "Commercial & Risk Leadership", href: "/capabilities#commercial-risk" },
+      { label: "Bid Strategy & Investment", href: "/capabilities#bid-strategy" },
+      { label: "Portfolio & Program Oversight", href: "/capabilities#portfolio-program" },
+      { label: "Operating Model & Performance", href: "/capabilities#operating-model" },
+      { label: "Delivery Leadership", href: "/capabilities#delivery-leadership" },
     ],
   },
   {
-    label: "Sectors",
+    label: "Sector Experience",
     href: "/sectors",
     subs: [
-      { label: "Transport & Roads", href: "/sectors#transport" },
+      { label: "Transport & Civil", href: "/sectors#transport" },
       { label: "Water & Utilities", href: "/sectors#water" },
-      { label: "Resources & Energy", href: "/sectors#resources" },
-      { label: "Defence", href: "/sectors#defence" },
+      { label: "Energy, Resources & Industrial", href: "/sectors#energy-resources" },
+      { label: "Built Environment & Property", href: "/sectors#built-environment" },
+      { label: "Major Capital Programs", href: "/sectors#capital-programs" },
     ],
   },
   {
-    label: "Proof",
+    label: "Delivery",
     href: "/proof",
-    subs: [
-      { label: "Case Studies", href: "/proof#case-studies" },
-      { label: "Clients", href: "/proof#clients" },
-      { label: "Testimonials", href: "/proof#testimonials" },
-    ],
+  },
+  {
+    label: "Projects",
+    href: "/proof#projects",
   },
   { label: "Insights", href: "/insights" },
   {
-    label: "Connect",
+    label: "Contact",
     href: "/connect",
     subs: [
       { label: "Our Leadership", href: "/connect#leadership" },
-      { label: "Our Team", href: "/connect#team" },
       { label: "Contact", href: "/connect#connect" },
     ],
   },
@@ -164,9 +166,11 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden lg:block">
-          <Link to="/connect" className="btn-pop">
-            Confidential Discussion
-          </Link>
+          <MagneticButton>
+            <Link to="/connect" className="btn-pop">
+              Get In Touch
+            </Link>
+          </MagneticButton>
         </div>
 
         {/* Mobile toggle */}
@@ -239,7 +243,7 @@ const Navbar = () => {
               ))}
               <li className="px-6 py-4">
                 <Link to="/connect" className="btn-pop block text-center" onClick={() => setMobileOpen(false)}>
-                  Confidential Discussion
+                  Get In Touch
                 </Link>
               </li>
             </ul>

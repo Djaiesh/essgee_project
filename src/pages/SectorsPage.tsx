@@ -2,35 +2,39 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import transportImg from "@/assets/sector-transport.jpg";
 import waterImg from "@/assets/sector-water.jpg";
 import resourcesImg from "@/assets/sector-resources.jpg";
 import socialImg from "@/assets/sector-social.jpg";
-import defenceImg from "@/assets/sector-defence.jpg";
-import railImg from "@/assets/sector-rail.jpg";
+
 
 const sectors = [
-  { id: "transport", title: "Transport & Roads", image: transportImg, description: "Highway upgrades, interchanges, rail corridors and multi-modal transport hubs.", detail: "We have extensive experience in major road and transport infrastructure projects across Australia, including highway duplications, interchange upgrades, and integrated transport hub developments. Our governance frameworks ensure these complex, high-visibility projects are delivered safely, on time, and within budget." },
-  { id: "water", title: "Water & Utilities", image: waterImg, description: "Water treatment, pipelines, pump stations and utility infrastructure programs.", detail: "Our water infrastructure experience spans treatment plants, distribution networks, pump stations, and sewer upgrades. We understand the unique challenges of brownfield utility projects where maintaining service continuity is critical during construction." },
-  { id: "resources", title: "Resources & Energy", image: resourcesImg, description: "Mining infrastructure, gas processing, renewables and heavy industrial facilities.", detail: "From iron ore processing facilities to gas plants and renewable energy installations, we bring structured project governance to resource sector developments. Our experience includes remote site logistics, fly-in-fly-out workforce management, and complex regulatory environments." },
-  { id: "social", title: "Social Infrastructure", image: socialImg, description: "Health, education, justice, and community facilities for government clients.", detail: "We deliver project management services for hospitals, schools, justice facilities, and community centres. These projects demand stakeholder engagement, compliance with government standards, and sensitivity to community impacts during construction." },
-  { id: "defence", title: "Defence", image: defenceImg, description: "Secure facility construction, base upgrades and compliance-critical defence projects.", detail: "Our defence project experience includes security-classified facility upgrades, base redevelopments, and compliance-critical projects. We maintain appropriate security clearances and understand the unique governance requirements of the Defence estate." },
-  { id: "urban-rail", title: "Urban Rail", image: railImg, description: "Rail corridor extensions, station builds, and signalling infrastructure.", detail: "Urban rail projects are among the most complex infrastructure undertakings, involving multiple contractor interfaces, community impacts, and stringent safety requirements. Our program-level governance ensures these high-profile investments are delivered successfully." },
+  { id: "transport", title: "Transport & Civil Infrastructure", image: transportImg, description: "Transport corridors, civil infrastructure, remote works and complex interface environments.", detail: "Experience includes civil and transport environments where delivery certainty depends on strong planning, stakeholder coordination, approvals management and disciplined commercial control." },
+  { id: "water", title: "Water & Utilities", image: waterImg, description: "Water, utilities, treatment, networks and service-critical infrastructure.", detail: "ESSGEE understands utility and water environments in which governance, continuity of service, operational interfaces, and stakeholder assurance are central to project success." },
+  { id: "energy-resources", title: "Energy, Resources & Industrial", image: resourcesImg, description: "Power, renewables, mining, industrial assets and remote delivery programs.", detail: "Experience spans complex industrial and resource settings where executive control, delivery discipline, stakeholder management and remote program execution are critical." },
+  { id: "built-environment", title: "Built Environment & Property", image: socialImg, description: "Commercial developments, large mixed-use environments and complex capital works.", detail: "ESSGEE brings experience from large-scale development and capital project environments where commercial clarity, design coordination, approvals and delivery governance all intersect." },
+  { id: "capital-programs", title: "Major Capital Programs", image: transportImg, description: "Multi-project environments requiring governance cadence, executive visibility and disciplined intervention.", detail: "Where clients are managing multiple workstreams, significant risk exposure or investor and board scrutiny, ESSGEE provides senior support to improve clarity, control and delivery confidence." },
 ];
 
 const SectorsPage = () => (
   <>
     <Navbar />
     <main>
+      <Helmet>
+        <title>Sector Experience | ESSGEE</title>
+        <meta name="description" content="ESSGEE brings experience across transport, water, utilities, energy, resources, the built environment, and major capital programs." />
+        <link rel="canonical" href="https://www.essgee.pro/sectors" />
+      </Helmet>
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={transportImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-slate-navy/85" />
         <div className="relative z-10 text-center px-6">
           <p className="text-micro uppercase tracking-[0.2em] text-vivid-amber mb-4">Sector Experience</p>
-          <h1 className="text-hero text-white">Where We Operate</h1>
+          <h1 className="text-hero text-white">Sector Experience</h1>
           <p className="text-body-lg text-white/70 max-w-2xl mx-auto mt-4">
-            Delivering governance across Australia's most demanding sectors
+            Governance, delivery leadership and commercial oversight across key sectors
           </p>
         </div>
       </section>
@@ -53,6 +57,14 @@ const SectorsPage = () => (
               </div>
             </SectionReveal>
           ))}
+        </div>
+      </section>
+
+      <section className="section-dark py-16">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-body-lg text-white/70 max-w-3xl mx-auto italic">
+            ESSGEE brings experience across transport, water, utilities, energy, resources, the built environment, and major capital programs, with a focus on governance, delivery leadership, commercial oversight, and executive stakeholder management.
+          </p>
         </div>
       </section>
     </main>

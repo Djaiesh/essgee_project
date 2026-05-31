@@ -2,24 +2,25 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import capImg from "@/assets/capabilities-hero.jpg";
 import {
-  Briefcase, ClipboardCheck, BarChart3, Users, AlertTriangle,
-  FileText, Settings, HardHat
+  Shield, TrendingUp, Target, BarChart3, Settings,
+  CheckCircle, Users, HardHat
 } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { MagneticButton } from "./MagneticButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const capabilities = [
-  { icon: Briefcase, title: "Project Management", href: "/capabilities#project-management" },
-  { icon: AlertTriangle, title: "Risk & Governance", href: "/capabilities#risk-governance" },
-  { icon: ClipboardCheck, title: "Contract Administration", href: "/capabilities#contract-admin" },
-  { icon: BarChart3, title: "Cost & Schedule Control", href: "/capabilities#cost-schedule" },
-  { icon: Users, title: "Stakeholder Management", href: "/capabilities#stakeholder-management" },
-  { icon: FileText, title: "Procurement Advisory", href: "/capabilities#procurement" },
-  { icon: Settings, title: "Program Delivery", href: "/capabilities#program-delivery" },
-  { icon: HardHat, title: "Construction Oversight", href: "/capabilities#construction-oversight" },
+  { icon: Shield, title: "Governance & Assurance", href: "/capabilities#governance-assurance" },
+  { icon: TrendingUp, title: "Commercial & Risk Leadership", href: "/capabilities#commercial-risk" },
+  { icon: Target, title: "Bid Strategy & Investment", href: "/capabilities#bid-strategy" },
+  { icon: BarChart3, title: "Portfolio & Program Oversight", href: "/capabilities#portfolio-program" },
+  { icon: Settings, title: "Operating Model & Performance", href: "/capabilities#operating-model" },
+  { icon: CheckCircle, title: "Accountability & Ownership", href: "/capabilities#accountability" },
+  { icon: Users, title: "Executive Stakeholder Leadership", href: "/capabilities#stakeholder-leadership" },
+  { icon: HardHat, title: "Delivery Leadership", href: "/capabilities#delivery-leadership" },
 ];
 
 const CapabilitiesSection = () => {
@@ -99,10 +100,12 @@ const CapabilitiesSection = () => {
               Capabilities
             </h2>
             <p className="cap-text text-body-lg text-slate-navy/70 mb-8">
-              Full-spectrum project management consulting, from feasibility through commissioning. Every engagement is principal-led — no junior resourcing, no templates.
+              ESSGEE offers principal-led advisory services in governance, commercial strategy, delivery leadership, and capital program oversight.
             </p>
             <div className="cap-text">
-              <Link to="/capabilities" className="btn-cta">Explore All Services</Link>
+              <MagneticButton>
+                <Link to="/capabilities" className="btn-cta">Explore All Services</Link>
+              </MagneticButton>
             </div>
           </div>
         </div>

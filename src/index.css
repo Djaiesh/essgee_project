@@ -98,14 +98,13 @@
 
   /* ── Navigation ── */
   .glass-nav {
-    @apply backdrop-blur-2xl border-b transition-all duration-500;
-    background: hsla(220, 14%, 12%, 0.8);
-    border-color: hsla(var(--glass-border));
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    @apply border-b transition-all duration-300;
+    background: hsl(var(--slate-navy));
+    border-color: hsla(0, 0%, 100%, 0.1);
   }
 
   .glass-nav-transparent {
-    @apply backdrop-blur-none border-b transition-all duration-500;
+    @apply border-b transition-all duration-300;
     background: transparent;
     border-color: transparent;
   }
@@ -137,14 +136,14 @@
     background-image: linear-gradient(135deg, hsl(var(--deep-azure)), hsl(var(--vivid-amber)));
   }
 
-  /* ── Premium Cards ── */
+  /* ── Premium Cards (Editorial Minimal) ── */
   .card-lift {
-    @apply transition-all duration-700 ease-out;
+    @apply transition-all duration-300 ease-out border border-border bg-white;
   }
 
   .card-lift:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px -12px rgba(20, 20, 25, 0.15);
+    transform: translateY(-4px);
+    border-color: hsl(var(--slate-navy));
   }
 
   /* ── Links / Underline ── */
@@ -164,35 +163,36 @@
     transform-origin: bottom left;
   }
 
-  /* ── Buttons (Magnetic Feel) ── */
+  /* ── Buttons (Editorial / Minimalist) ── */
   .btn-cta {
-    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide uppercase rounded-full transition-all duration-500 ease-out;
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold tracking-widest uppercase rounded-sm transition-all duration-300 ease-out;
     background: hsl(var(--slate-navy));
     color: white;
-    box-shadow: 0 0 0 1px hsl(var(--slate-navy));
+    border: 1px solid hsl(var(--slate-navy));
   }
 
   .btn-cta:hover {
-    background: hsl(220, 14%, 8%);
-    transform: scale(1.02) translateY(-2px);
-    box-shadow: 0 10px 30px -5px rgba(20, 20, 25, 0.4), 0 0 0 1px hsl(var(--slate-navy));
+    background: transparent;
+    color: hsl(var(--slate-navy));
+    transform: translateY(-2px);
   }
 
   .btn-pop {
-    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide uppercase rounded-full transition-all duration-500 ease-out;
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold tracking-widest uppercase rounded-sm transition-all duration-300 ease-out;
     background: hsl(var(--vivid-amber));
     color: white;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+    border: 1px solid hsl(var(--vivid-amber));
   }
 
   .btn-pop:hover {
-    background: hsl(24, 100%, 45%);
-    transform: scale(1.02) translateY(-2px);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4), 0 15px 35px -5px rgba(240, 74, 0, 0.5);
+    background: hsl(var(--slate-navy));
+    color: white;
+    border-color: hsl(var(--slate-navy));
+    transform: translateY(-2px);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide uppercase rounded-full transition-all duration-500 ease-out border-2;
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold tracking-widest uppercase rounded-sm transition-all duration-300 ease-out border-2;
     border-color: rgba(255, 255, 255, 0.3);
     color: white;
     background: transparent;
@@ -202,8 +202,7 @@
     background: white;
     color: hsl(var(--slate-navy));
     border-color: white;
-    transform: scale(1.02) translateY(-2px);
-    box-shadow: 0 15px 35px -5px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
   }
 
   /* ── Counter ── */

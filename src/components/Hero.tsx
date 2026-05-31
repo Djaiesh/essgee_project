@@ -8,15 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const metrics = [
   { value: 30, suffix: "+", label: "Years Experience" },
-  { value: 2.7, suffix: "B+", prefix: "AUD ", label: "Portfolio Value", decimals: 1 },
-  { value: 35, suffix: "+", label: "Major Projects" },
+  { value: 2.4, suffix: "B+", prefix: "AUD ", label: "Portfolio Value", decimals: 1 },
+  { value: 6, suffix: "+", label: "Major Sectors" },
 ];
 
 const phrases = [
-  "Risk Becomes Clarity.",
+  "Governance Becomes Clarity.",
+  "Complexity Becomes Confidence.",
   "Decisions Become Direction.",
-  "Complexity Becomes Control.",
-  "Projects Become Outcomes.",
+  "Delivery Becomes Certainty.",
 ];
 
 const Hero = () => {
@@ -139,18 +139,15 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
       </div>
 
-      {/* Layer 2: Midground Elements (Blueprint dots/nodes) */}
+      {/* Layer 2: Midground Elements (Removed Blueprint dots/nodes for a more professional look) */}
       <div ref={midRef} className="absolute inset-0 pointer-events-none opacity-40">
-        <div className="absolute top-[20%] left-[15%] w-32 h-32 border border-vivid-amber/20 rounded-full" />
-        <div className="absolute bottom-[30%] right-[10%] w-64 h-px bg-vivid-amber/20" />
-        <div className="absolute top-[40%] right-[20%] w-1 h-1 bg-vivid-amber rounded-full shadow-[0_0_10px_2px_rgba(240,74,0,0.8)]" />
       </div>
 
       {/* Layer 3: Foreground Content */}
       <div ref={frontRef} className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
         
         <p className="hero-text text-micro uppercase tracking-[0.25em] text-vivid-amber/80 mb-5">
-          Risk-Led Project Management Consulting
+          Principal-Led Advisory
         </p>
 
         <h1 
@@ -170,8 +167,7 @@ const Hero = () => {
         <div className="hero-text w-24 h-px bg-vivid-amber/50 mb-6" />
 
         <p className="hero-text text-sm md:text-lg text-white/55 max-w-xl mb-12 px-2">
-          Independent, principal-led consulting specialising in risk-led
-          governance for complex infrastructure.
+          Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.
         </p>
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-20">
@@ -188,7 +184,7 @@ const Hero = () => {
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
         <span className="hero-text text-micro uppercase tracking-[0.2em] text-white/25">Scroll</span>
         <div className="hero-text w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-vivid-amber animate-bounce" />
+          <div className="w-1.5 h-1.5 rounded-full bg-vivid-amber animate-pulse" />
         </div>
       </div>
 

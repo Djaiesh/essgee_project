@@ -3,17 +3,17 @@ import { Mail, Phone, MapPin, Download, Linkedin } from "lucide-react";
 
 const navLinks = [
   { label: "Capabilities", to: "/capabilities" },
-  { label: "Sectors", to: "/sectors" },
-  { label: "Proof", to: "/proof" },
+  { label: "Sector Experience", to: "/sectors" },
+  { label: "Delivery & Projects", to: "/proof" },
   { label: "Insights", to: "/insights" },
-  { label: "Connect", to: "/connect" },
+  { label: "Contact", to: "/connect" },
 ];
 
 const contactItems = [
-  { icon: Mail, label: "satya@essgeeprojects.com.au", href: "mailto:satya@essgeeprojects.com.au" },
-  { icon: Phone, label: "+61 400 000 000", href: "tel:+61400000000" },
+  { icon: Mail, label: "satya.gady@essgee.pro", href: "mailto:satya.gady@essgee.pro" },
+  { icon: Phone, label: "+61 401 190 115", href: "tel:+61401190115" },
   { icon: MapPin, label: "Perth, Western Australia", href: null },
-  { icon: Linkedin, label: "LinkedIn Profile", href: "https://linkedin.com", external: true },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/satya-gady", external: true },
 ];
 
 const Footer = () => (
@@ -50,7 +50,7 @@ const Footer = () => (
           </Link>
 
           <p className="text-sm text-white/40 leading-relaxed max-w-[18rem]">
-            Independent project management consulting. Risk-led governance for complex infrastructure.
+            Principal-led advisory support for complex infrastructure, capital delivery and governance challenges.
           </p>
 
           <button
@@ -116,7 +116,7 @@ const Footer = () => (
       {/* ── Bottom bar ── */}
       <div className="border-t border-white/8 pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-xs text-white/20">
-          © {new Date().getFullYear()} ESSGEE Pty Ltd. All rights reserved.
+          © {new Date().getFullYear()} ESSGEE. All rights reserved.
         </p>
         <div className="flex items-center gap-6">
           <Link to="/" className="text-xs text-white/20 hover:text-vivid-amber transition-colors duration-200">

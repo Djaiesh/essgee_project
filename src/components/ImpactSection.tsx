@@ -44,7 +44,7 @@ const ImpactSection = () => {
           filter: "blur(0px)",
           y: 0,
           duration: 1,
-          ease: "back.out(1.5)", // The "burst" feel
+          ease: "power3.out", // Stately professional feel
           stagger: 0.1,
           scrollTrigger: {
             trigger: gridRef.current,

@@ -58,21 +58,21 @@ const ConnectSection = () => {
           <div ref={infoRef} className="space-y-8 relative z-10">
             <div className="connect-info">
               <h3 className="font-display text-2xl font-semibold text-white mb-2">Satya Gady</h3>
-              <p className="text-vivid-amber font-medium">Principal & Director</p>
+              <p className="text-vivid-amber font-medium">Executive Director</p>
             </div>
 
             <div className="space-y-5">
-              <a href="tel:+61400000000" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
+              <a href="tel:+61401190115" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-vivid-amber/50 group-hover:bg-vivid-amber/10 transition-colors">
                   <Phone className="w-4 h-4 text-vivid-amber" />
                 </div>
-                <span>+61 400 000 000</span>
+                <span>+61 401 190 115</span>
               </a>
-              <a href="mailto:satya@essgeeprojects.com.au" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
+              <a href="mailto:satya.gady@essgee.pro" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-vivid-amber/50 group-hover:bg-vivid-amber/10 transition-colors">
                   <Mail className="w-4 h-4 text-vivid-amber" />
                 </div>
-                <span>satya@essgeeprojects.com.au</span>
+                <span>satya.gady@essgee.pro</span>
               </a>
               <div className="connect-info flex items-center gap-4 text-white/70 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center">
@@ -80,7 +80,7 @@ const ConnectSection = () => {
                 </div>
                 <span>Perth, Western Australia</span>
               </div>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
+              <a href="https://www.linkedin.com/in/satya-gady" target="_blank" rel="noopener noreferrer" className="connect-info flex items-center gap-4 text-white/70 hover:text-white hover:translate-x-1 transition-all duration-300 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#0077b5]/50 group-hover:bg-[#0077b5]/10 transition-colors">
                   <Linkedin className="w-4 h-4 text-vivid-amber group-hover:text-[#0077b5]" />
                 </div>

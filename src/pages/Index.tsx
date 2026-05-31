@@ -13,9 +13,9 @@ import { Helmet } from "react-helmet-async";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "ESSGEE Projects",
-  "description": "Independent project management consulting specialising in risk-led governance for complex infrastructure.",
-  "url": "https://essgeeprojects.com.au",
+  "name": "ESSGEE",
+  "description": "Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.",
+  "url": "https://www.essgee.pro",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Perth",
@@ -25,21 +25,22 @@ const jsonLd = {
   "founder": {
     "@type": "Person",
     "name": "Satya Gady",
-    "jobTitle": "Principal & Director"
+    "jobTitle": "Executive Director"
   },
-  "areaServed": "Australia",
-  "serviceType": ["Project Management Consulting", "Risk Governance", "Contract Administration", "Cost & Schedule Control"]
+  "areaServed": ["Australia", "International"],
+  "serviceType": ["Governance & Assurance", "Commercial & Risk Leadership", "Bid Strategy & Investment Support", "Portfolio & Program Oversight", "Delivery Leadership"],
+  "sameAs": ["https://www.linkedin.com/in/satya-gady"]
 };
 
 const Index = () => (
   <>
     <Helmet>
-      <title>ESSGEE Projects</title>
-      <meta name="description" content="ESSGEE Projects provides independent project management consulting to government and private-sector clients. 30+ years, AUD 2.7B+ portfolio. Principal-led delivery." />
-      <meta property="og:title" content="ESSGEE Projects | Protecting Capital. Delivering Certainty." />
-      <meta property="og:description" content="Independent project management consulting specialising in risk-led governance for complex infrastructure." />
+      <title>ESSGEE | Where Strategy Meets Delivery</title>
+      <meta name="description" content="ESSGEE provides principal-led advisory support for complex infrastructure, capital delivery and governance challenges. 30+ years of executive leadership across Australia and international markets." />
+      <meta property="og:title" content="ESSGEE | Where Strategy Meets Delivery" />
+      <meta property="og:description" content="Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges." />
       <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://essgeeprojects.com.au" />
+      <link rel="canonical" href="https://www.essgee.pro" />
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
     <Navbar />
