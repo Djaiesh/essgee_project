@@ -11,7 +11,8 @@ const GlassCarousel = ({ children, className = "" }: Props) => {
   const offsetRef = useRef(0);          // current scroll position in px
   const rafRef = useRef<number>(0);
   const pausedRef = useRef(false);
-  const speed = 0.6;                    // px per frame (~36px/s at 60fps)
+  const previousTimeRef = useRef<number>(0);
+  const speed = 36;                     // px per second
 
   // Duplicate items for seamless loop
   const allItems = [...children, ...children];
@@ -29,9 +30,11 @@ const GlassCarousel = ({ children, className = "" }: Props) => {
     }
   };
 
-  const tick = useCallback(() => {
-    if (!pausedRef.current) {
-      offsetRef.current += speed;
+  const tick = useCallback((time: number) => {
+    const elapsed = previousTimeRef.current ? (time - previousTimeRef.current) / 1000 : 0;
+    previousTimeRef.current = time;
+    if (!pausedRef.current && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      offsetRef.current += speed * elapsed;
       const half = getHalfWidth();
       if (half > 0 && offsetRef.current >= half) {
         offsetRef.current -= half; // seamless reset
@@ -97,6 +100,8 @@ const GlassCarousel = ({ children, className = "" }: Props) => {
           style={{ width: "max-content", willChange: "transform" }}
           onMouseEnter={() => { pausedRef.current = true; }}
           onMouseLeave={() => { pausedRef.current = false; }}
+          onFocus={() => { pausedRef.current = true; }}
+          onBlur={() => { pausedRef.current = false; }}
         >
           {allItems.map((child, i) => (
             <div

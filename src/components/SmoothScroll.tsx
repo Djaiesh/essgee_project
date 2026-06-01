@@ -13,6 +13,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
@@ -28,16 +29,17 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     // Connect GSAP ScrollTrigger to Lenis
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const update = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(update);
 
     // We want GSAP to control the tick for maximum smoothness
     gsap.ticker.lagSmoothing(0);
 
     return () => {
       // Cleanup on unmount
-      gsap.ticker.remove((time) => lenis.raf(time * 1000));
+      gsap.ticker.remove(update);
       lenis.destroy();
       lenisRef.current = null;
     };

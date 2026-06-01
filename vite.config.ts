@@ -14,8 +14,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    compression({ algorithm: "gzip", exclude: [/\.(br)$ /, /\.(gz)$/] }),
-    compression({ algorithm: "brotliCompress", exclude: [/\.(br)$ /, /\.(gz)$/] }),
+    compression({ algorithms: ["gzip", "brotliCompress"], exclude: [/\.(br|gz)$/] }),
   ],
   assetsInclude: ['**/*.MP4'],
   resolve: {

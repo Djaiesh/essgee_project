@@ -18,6 +18,7 @@
     --deep-azure: 210 100% 40%;      /* Electric Blue #0066cc */
     --vivid-amber: 24 100% 50%;      /* Strong subtle orange #ff6600 */
     --vivid-amber-light: 24 100% 60%;
+    --teal-accent: 176 88% 34%;
 
     /* Semantic Tokens */
     --background: var(--main-space);
@@ -61,6 +62,11 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
     overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--teal-accent));
+    outline-offset: 3px;
   }
 
   h1, h2, h3 {
@@ -211,6 +217,14 @@
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1;
     color: hsl(var(--vivid-amber));
+  }
+
+  .contact-link {
+    @apply flex items-center gap-4 text-white/70 transition-all duration-300 hover:translate-x-1 hover:text-white;
+  }
+
+  .contact-link svg {
+    @apply h-5 w-5 shrink-0 text-teal-accent;
   }
 }
 

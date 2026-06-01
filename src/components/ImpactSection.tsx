@@ -4,17 +4,9 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { metrics } from "@/data/siteContent";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const metrics = [
-  { value: 30, suffix: "+", label: "Years Experience" },
-  { value: 2.7, suffix: "B+", prefix: "AUD ", label: "Portfolio Value", decimals: 1 },
-  { value: 35, suffix: "+", label: "Major Projects" },
-  { value: 100, suffix: "%", label: "Principal-Led" },
-  { value: 0, suffix: "", label: "Lost Time Injuries", display: "Zero" },
-  { value: 12, suffix: "+", label: "Sector Categories" },
-];
 
 const ImpactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -68,15 +60,11 @@ const ImpactSection = () => {
         </div>
 
         <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {metrics.map((m, i) => (
+          {metrics.map((m) => (
             <div key={m.label} className="impact-card text-center p-8 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-              {'display' in m && m.display ? (
-                <span className="counter-value !text-white">{m.display}</span>
-              ) : (
-                <div className="text-white">
-                  <AnimatedCounter value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} />
-                </div>
-              )}
+              <div className="text-white">
+                <AnimatedCounter value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} />
+              </div>
               <p className="text-micro uppercase tracking-widest text-white/50 mt-3">{m.label}</p>
             </div>
           ))}

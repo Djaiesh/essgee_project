@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 import transportImg from "@/assets/sector-transport.jpg";
 import waterImg from "@/assets/sector-water.jpg";
 import resourcesImg from "@/assets/sector-resources.jpg";
@@ -21,11 +22,7 @@ const SectorsPage = () => (
   <>
     <Navbar />
     <main>
-      <Helmet>
-        <title>Sector Experience | ESSGEE</title>
-        <meta name="description" content="ESSGEE brings experience across transport, water, utilities, energy, resources, the built environment, and major capital programs." />
-        <link rel="canonical" href="https://www.essgee.pro/sectors" />
-      </Helmet>
+      <Seo title="Sector Experience" path="/sectors" description="ESSGEE brings experience across transport, water, utilities, energy, resources, the built environment, and major capital programs." />
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={transportImg} alt="" className="absolute inset-0 w-full h-full object-cover" />

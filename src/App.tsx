@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { lazy, Suspense, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -34,6 +34,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => (
 const AppContent = () => {
   const [preloaderComplete, setPreloaderComplete] = useState(false);
   const location = useLocation();
+  const completePreloader = useCallback(() => setPreloaderComplete(true), []);
 
   useEffect(() => {
     // Prevent scrolling while preloader is active, by hiding body overflow.
@@ -58,7 +59,7 @@ const AppContent = () => {
   return (
     <>
       <ScrollProgress />
-      {!preloaderComplete && <Preloader onComplete={() => setPreloaderComplete(true)} />}
+      {!preloaderComplete && <Preloader onComplete={completePreloader} />}
       <SmoothScroll>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

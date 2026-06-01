@@ -21,6 +21,7 @@ export const useScrollAnimation = ({
 }: UseScrollAnimationProps) => {
   useEffect(() => {
     if (!triggerRef.current) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const ctx = gsap.context(() => {
       const elements = gsap.utils.toArray(childrenSelector, triggerRef.current);
@@ -43,7 +44,8 @@ export const useScrollAnimation = ({
           scrollTrigger: {
             trigger: triggerRef.current,
             start,
-            toggleActions: 'play none none reverse', // Optional: replay on scroll up? 'play none none none' is safer for performance.
+            toggleActions: 'play none none none',
+            once: true,
           },
         }
       );

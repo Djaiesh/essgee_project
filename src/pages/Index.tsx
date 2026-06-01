@@ -6,16 +6,20 @@ import SectorsSection from "@/components/SectorsSection";
 import ProofSection from "@/components/ProofSection";
 import ImpactSection from "@/components/ImpactSection";
 import InsightsSection from "@/components/InsightsSection";
+import ClientsSection from "@/components/ClientsSection";
+import SpecialistsSection from "@/components/SpecialistsSection";
 
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import { site } from "@/data/siteContent";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "ESSGEE",
+  "name": "ESSGEE Projects",
   "description": "Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.",
-  "url": "https://www.essgee.pro",
+  "url": site.url,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Perth",
@@ -28,19 +32,16 @@ const jsonLd = {
     "jobTitle": "Executive Director"
   },
   "areaServed": ["Australia", "International"],
+  "telephone": site.phoneDisplay,
+  "email": site.email,
   "serviceType": ["Governance & Assurance", "Commercial & Risk Leadership", "Bid Strategy & Investment Support", "Portfolio & Program Oversight", "Delivery Leadership"],
   "sameAs": ["https://www.linkedin.com/in/satya-gady"]
 };
 
 const Index = () => (
   <>
+    <Seo title="ESSGEE" description="ESSGEE provides principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges." />
     <Helmet>
-      <title>ESSGEE | Where Strategy Meets Delivery</title>
-      <meta name="description" content="ESSGEE provides principal-led advisory support for complex infrastructure, capital delivery and governance challenges. 30+ years of executive leadership across Australia and international markets." />
-      <meta property="og:title" content="ESSGEE | Where Strategy Meets Delivery" />
-      <meta property="og:description" content="Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges." />
-      <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://www.essgee.pro" />
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
     <Navbar />
@@ -51,6 +52,8 @@ const Index = () => (
       <SectorsSection />
       <ProofSection />
       <ImpactSection />
+      <ClientsSection />
+      <SpecialistsSection />
       <InsightsSection />
 
     </main>

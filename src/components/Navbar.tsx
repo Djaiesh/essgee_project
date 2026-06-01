@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { MagneticButton } from "./MagneticButton";
+import logo from "@/assets/essgee_logo.jpeg";
 
 interface SubItem {
   label: string;
@@ -112,9 +113,8 @@ const Navbar = () => {
       {/* 30% Slate Navy nav bar */}
       <nav className="container mx-auto flex items-center justify-between px-6 h-20" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-2 z-10" aria-label="ESSGEE home">
-          <span className="font-display text-2xl font-bold tracking-tight text-white">
-            ESSGEE
-          </span>
+          <img src={logo} alt="ESSGEE Projects" className="h-14 w-14 rounded-md object-cover" />
+          <span className="hidden text-sm font-bold tracking-[0.16em] text-white sm:block">ESSGEE PROJECTS</span>
         </Link>
 
         {/* Desktop nav */}

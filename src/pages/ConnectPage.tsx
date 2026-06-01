@@ -5,6 +5,7 @@ import connectHero from "@/assets/connect-hero.jpg";
 import SectionReveal from "@/components/SectionReveal";
 import { Linkedin, Mail, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
 
 const leadership = [
   {
@@ -21,11 +22,7 @@ const ConnectPage = () => (
   <>
     <Navbar />
     <main>
-      <Helmet>
-        <title>Contact & Leadership | ESSGEE</title>
-        <meta name="description" content="Contact Satya Gady, Executive Director of ESSGEE. Principal-led advisory for complex infrastructure and capital delivery." />
-        <link rel="canonical" href="https://www.essgee.pro/connect" />
-      </Helmet>
+      <Seo title="Contact & Leadership" path="/connect" description="Contact Satya Gady, Executive Director of ESSGEE Projects. Principal-led advisory for complex infrastructure and capital delivery." />
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={connectHero} alt="" className="absolute inset-0 w-full h-full object-cover" />

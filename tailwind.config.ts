@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -35,6 +36,7 @@ export default {
         'slate-navy': "hsl(var(--slate-navy))",
         'deep-azure': "hsl(var(--deep-azure))",
         'vivid-amber': "hsl(var(--vivid-amber))",
+        'teal-accent': "hsl(var(--teal-accent))",
         // Legacy aliases
         'fence-green': "hsl(var(--fence-green))",
         'norfolk-green': "hsl(var(--norfolk-green))",
@@ -111,5 +113,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

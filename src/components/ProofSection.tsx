@@ -82,7 +82,7 @@ const ProofSection = () => {
       });
 
       // 2. Animate cards in as they come into view
-      cards.forEach((card: any, i) => {
+      cards.forEach((card, i) => {
         gsap.fromTo(
           card,
           { opacity: 0, x: i % 2 === 0 ? 50 : -50, filter: "blur(10px)" },

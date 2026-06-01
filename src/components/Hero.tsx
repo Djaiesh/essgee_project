@@ -3,14 +3,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroVideo from "@/assets/hero_video.MP4";
 import AnimatedCounter from "./AnimatedCounter";
+import { Link } from "react-router-dom";
+import { metrics } from "@/data/siteContent";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const metrics = [
-  { value: 30, suffix: "+", label: "Years Experience" },
-  { value: 2.4, suffix: "B+", prefix: "AUD ", label: "Portfolio Value", decimals: 1 },
-  { value: 6, suffix: "+", label: "Major Sectors" },
-];
 
 const phrases = [
   "Governance Becomes Clarity.",
@@ -64,14 +60,14 @@ const Hero = () => {
       }, 4000);
 
       // --- Micro Interaction (Mouse Tracker) ---
-      let xToBg = gsap.quickTo(bgRef.current, "x", { duration: 1, ease: "power3" });
-      let yToBg = gsap.quickTo(bgRef.current, "y", { duration: 1, ease: "power3" });
+      const xToBg = gsap.quickTo(bgRef.current, "x", { duration: 1, ease: "power3" });
+      const yToBg = gsap.quickTo(bgRef.current, "y", { duration: 1, ease: "power3" });
       
-      let xToMid = gsap.quickTo(midRef.current, "x", { duration: 0.8, ease: "power3" });
-      let yToMid = gsap.quickTo(midRef.current, "y", { duration: 0.8, ease: "power3" });
+      const xToMid = gsap.quickTo(midRef.current, "x", { duration: 0.8, ease: "power3" });
+      const yToMid = gsap.quickTo(midRef.current, "y", { duration: 0.8, ease: "power3" });
       
-      let xToFront = gsap.quickTo(frontRef.current, "x", { duration: 0.5, ease: "power3" });
-      let yToFront = gsap.quickTo(frontRef.current, "y", { duration: 0.5, ease: "power3" });
+      const xToFront = gsap.quickTo(frontRef.current, "x", { duration: 0.5, ease: "power3" });
+      const yToFront = gsap.quickTo(frontRef.current, "y", { duration: 0.5, ease: "power3" });
 
       const onMouseMove = (e: MouseEvent) => {
         const { innerWidth, innerHeight } = window;
@@ -170,8 +166,13 @@ const Hero = () => {
           Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-20">
-          {metrics.map((m, i) => (
+        <div className="hero-text mb-12 flex flex-wrap justify-center gap-4">
+          <Link to="/connect" className="btn-pop">Start a Confidential Discussion</Link>
+          <Link to="/capabilities" className="btn-outline">View Our Capabilities</Link>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+          {metrics.slice(0, 3).map((m) => (
             <div key={m.label} className="hero-metric text-center">
               <AnimatedCounter value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} />
               <p className="text-micro uppercase tracking-widest text-white/40 mt-2">{m.label}</p>

@@ -8,6 +8,7 @@ import {
   CheckCircle, Users, HardHat
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Seo from "@/components/Seo";
 
 const capabilities = [
   { id: "governance-assurance", icon: Shield, title: "Governance & Assurance", description: "Governance frameworks, executive reporting, assurance reviews and decision support for complex projects and portfolios.", detail: "ESSGEE establishes practical governance structures that help sponsors, boards, and executive teams make confident decisions. This includes stage-gate discipline, assurance frameworks, executive dashboards, portfolio reviews, performance reporting, controls aligned with delivery risk, and targeted intervention when program complexity or commercial exposure increases." },
@@ -24,11 +25,7 @@ const CapabilitiesPage = () => (
   <>
     <Navbar />
     <main>
-      <Helmet>
-        <title>Capabilities | ESSGEE</title>
-        <meta name="description" content="ESSGEE offers principal-led advisory services in governance, commercial strategy, delivery leadership, and capital program oversight." />
-        <link rel="canonical" href="https://www.essgee.pro/capabilities" />
-      </Helmet>
+      <Seo title="Capabilities" path="/capabilities" description="ESSGEE offers principal-led advisory services in governance, commercial strategy, delivery leadership, and capital program oversight." />
       {/* Hero — 30% Slate Navy overlay */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={capabilitiesHero} alt="" className="absolute inset-0 w-full h-full object-cover" />
