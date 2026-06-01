@@ -6,6 +6,7 @@ import SectionReveal from "@/components/SectionReveal";
 import { Linkedin, Mail, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import Seo from "@/components/Seo";
+import logo from "@/assets/essgee_logo.jpeg";
 
 const leadership = [
   {
@@ -58,7 +59,8 @@ const ConnectPage = () => (
                   className="lg:col-span-2 relative min-h-[280px] lg:min-h-[540px] flex flex-col items-center justify-center gap-4"
                   style={{ background: "linear-gradient(155deg, hsl(210,28%,20%) 0%, hsl(210,28%,30%) 100%)" }}
                 >
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/25">Photo Placeholder</p>
+                  <img src={logo} alt="" className="h-32 w-32 rounded-xl object-cover opacity-30 mix-blend-screen" />
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/35">Leadership portrait reserved</p>
                 </div>
 
                 {/* ── RIGHT: Bio content ── */}
