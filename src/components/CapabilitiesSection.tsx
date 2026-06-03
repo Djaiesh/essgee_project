@@ -52,6 +52,7 @@ const CapabilitiesSection = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );
@@ -80,6 +81,7 @@ const CapabilitiesSection = () => {
           scrollTrigger: {
             trigger: gridRef.current,
             start: "top 85%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );

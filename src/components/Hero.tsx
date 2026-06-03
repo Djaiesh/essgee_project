@@ -59,33 +59,6 @@ const Hero = () => {
         });
       }, 4000);
 
-      // --- Micro Interaction (Mouse Tracker) ---
-      const xToBg = gsap.quickTo(bgRef.current, "x", { duration: 1, ease: "power3" });
-      const yToBg = gsap.quickTo(bgRef.current, "y", { duration: 1, ease: "power3" });
-      
-      const xToMid = gsap.quickTo(midRef.current, "x", { duration: 0.8, ease: "power3" });
-      const yToMid = gsap.quickTo(midRef.current, "y", { duration: 0.8, ease: "power3" });
-      
-      const xToFront = gsap.quickTo(frontRef.current, "x", { duration: 0.5, ease: "power3" });
-      const yToFront = gsap.quickTo(frontRef.current, "y", { duration: 0.5, ease: "power3" });
-
-      const onMouseMove = (e: MouseEvent) => {
-        const { innerWidth, innerHeight } = window;
-        const x = (e.clientX / innerWidth - 0.5) * 2; // -1 to 1
-        const y = (e.clientY / innerHeight - 0.5) * 2; // -1 to 1
-
-        xToBg(x * -15);
-        yToBg(y * -15);
-
-        xToMid(x * -30);
-        yToMid(y * -30);
-
-        xToFront(x * -10);
-        yToFront(y * -10);
-      };
-
-      window.addEventListener("mousemove", onMouseMove);
-
       // --- Parallax on Scroll ---
       gsap.to(bgRef.current, {
         yPercent: 30,
@@ -110,7 +83,6 @@ const Hero = () => {
       });
 
       return () => {
-        window.removeEventListener("mousemove", onMouseMove);
         clearInterval(interval);
         lightSweep.kill();
       };
@@ -120,10 +92,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={container} id="origin" className="relative h-screen overflow-hidden bg-black text-white" aria-label="Hero">
+    <section ref={container} id="origin" className="relative min-h-screen lg:h-screen overflow-hidden bg-black text-white" aria-label="Hero">
       
       {/* Layer 1: Background */}
-      <div ref={bgRef} className="absolute inset-[-5%] w-[110%] h-[110%]">
+      <div ref={bgRef} className="absolute inset-0 w-full h-full">
         <video 
           src={heroVideo} 
           autoPlay 
@@ -135,16 +107,14 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
       </div>
 
-      {/* Layer 2: Midground Elements (Removed Blueprint dots/nodes for a more professional look) */}
+      {/* Layer 2: Midground Elements */}
       <div ref={midRef} className="absolute inset-0 pointer-events-none opacity-40">
       </div>
 
       {/* Layer 3: Foreground Content */}
-      <div ref={frontRef} className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
+      <div ref={frontRef} className="relative z-10 min-h-screen lg:h-full flex flex-col justify-center items-center text-center px-6 pt-28 pb-12 lg:pt-0 lg:pb-0">
         
-        <p className="hero-text text-micro uppercase tracking-[0.25em] text-vivid-amber/80 mb-5">
-          Principal-Led Advisory
-        </p>
+
 
         <h1 
           ref={textRef}
@@ -162,13 +132,13 @@ const Hero = () => {
 
         <div className="hero-text w-24 h-px bg-vivid-amber/50 mb-6" />
 
-        <p className="hero-text text-sm md:text-lg text-white/55 max-w-xl mb-12 px-2">
+        <p className="hero-text text-sm md:text-lg text-white/55 max-w-xl mb-8 lg:mb-12 px-2">
           Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.
         </p>
 
-        <div className="hero-text mb-12 flex flex-wrap justify-center gap-4">
-          <Link to="/connect" className="btn-pop">Start a Confidential Discussion</Link>
-          <Link to="/capabilities" className="btn-outline">View Our Capabilities</Link>
+        <div className="hero-text mb-8 lg:mb-12 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+          <Link to="/connect#connect" className="btn-pop animate-pulse hover:animate-none w-full sm:w-auto">Start a Confidential Discussion</Link>
+          <Link to="/capabilities" className="btn-outline w-full sm:w-auto">View Our Capabilities</Link>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-16">
@@ -178,14 +148,6 @@ const Hero = () => {
               <p className="text-micro uppercase tracking-widest text-white/40 mt-2">{m.label}</p>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="hero-text text-micro uppercase tracking-[0.2em] text-white/25">Scroll</span>
-        <div className="hero-text w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-vivid-amber animate-pulse" />
         </div>
       </div>
 

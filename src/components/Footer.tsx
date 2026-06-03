@@ -6,7 +6,7 @@ import { site } from "@/data/siteContent";
 const navigation = [
   ["Capabilities", "/capabilities"],
   ["Sector Experience", "/sectors"],
-  ["Delivery & Projects", "/proof"],
+  ["Projects", "/proof"],
   ["Insights", "/insights"],
   ["Contact", "/connect"],
 ];
@@ -17,7 +17,7 @@ const Footer = () => (
       <div className="grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
           <Link to="/" className="inline-flex items-center gap-4">
-            <img src={logo} alt="" className="h-20 w-20 rounded-lg object-cover" />
+            <img src={logo} alt="" className="h-20 w-20 rounded-lg object-cover border border-white/10 shadow-lg" />
             <span className="font-display text-2xl font-bold tracking-wide text-white">ESSGEE PROJECTS</span>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/50">Principal-led advisory support for complex infrastructure, capital delivery and governance challenges.</p>

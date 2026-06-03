@@ -4,9 +4,8 @@ import ConnectSection from "@/components/ConnectSection";
 import connectHero from "@/assets/connect-hero.jpg";
 import SectionReveal from "@/components/SectionReveal";
 import { Linkedin, Mail, Award } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import Seo from "@/components/Seo";
-import logo from "@/assets/essgee_logo.jpeg";
+import satyaImg from "@/assets/satya.jpeg";
 
 const leadership = [
   {
@@ -22,8 +21,8 @@ const leadership = [
 const ConnectPage = () => (
   <>
     <Navbar />
+    <Seo title="Contact & Leadership" path="/connect" description="Contact Satya Gady, Executive Director of ESSGEE Projects. Principal-led advisory for complex infrastructure and capital delivery." />
     <main>
-      <Seo title="Contact & Leadership" path="/connect" description="Contact Satya Gady, Executive Director of ESSGEE Projects. Principal-led advisory for complex infrastructure and capital delivery." />
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={connectHero} alt="" className="absolute inset-0 w-full h-full object-cover" />
@@ -35,7 +34,6 @@ const ConnectPage = () => (
           </p>
         </div>
       </section>
-
 
       {/* Leadership */}
       <section id="leadership" className="section-light section-padding scroll-mt-20" aria-labelledby="leadership-heading">
@@ -54,13 +52,13 @@ const ConnectPage = () => (
             <SectionReveal key={person.name}>
               <div className="grid lg:grid-cols-5 rounded-2xl overflow-hidden border border-border/50 shadow-[0_12px_48px_-12px_hsla(210,28%,28%,0.14)]">
 
-                {/* ── LEFT: Photo placeholder ── */}
-                <div
-                  className="lg:col-span-2 relative min-h-[280px] lg:min-h-[540px] flex flex-col items-center justify-center gap-4"
-                  style={{ background: "linear-gradient(155deg, hsl(210,28%,20%) 0%, hsl(210,28%,30%) 100%)" }}
-                >
-                  <img src={logo} alt="" className="h-32 w-32 rounded-xl object-cover opacity-30 mix-blend-screen" />
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/35">Leadership portrait reserved</p>
+                {/* ── LEFT: Photo ── */}
+                <div className="lg:col-span-2 relative h-[350px] sm:h-[450px] lg:h-auto lg:min-h-[540px] overflow-hidden bg-[#fafafc] border-b lg:border-b-0 lg:border-r border-border/10">
+                  <img
+                    src={satyaImg}
+                    alt="Satya Gady - Executive Director"
+                    className="w-full h-full object-cover object-[center_12%] scale-[1.03]"
+                  />
                 </div>
 
                 {/* ── RIGHT: Bio content ── */}
@@ -73,7 +71,7 @@ const ConnectPage = () => (
                   </p>
 
                   <p className="text-slate-navy/65 leading-relaxed mb-5">{person.bio}</p>
-                  <p className="text-sm text-slate-navy/50 leading-relaxed mb-8">
+                  <p className="text-sm text-slate-navy/55 leading-relaxed mb-8">
                     With a career spanning major public and private sector programs across transport, water, utilities, energy, resources and the built environment, Satya's methodology is built on the principle that governance, commercial discipline and executive accountability must start before the first contract is signed. His direct involvement ensures clients receive senior insight at every critical decision point.
                   </p>
 

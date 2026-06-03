@@ -10,11 +10,11 @@ import NotFound from "./pages/NotFound";
 import SmoothScroll from "./components/SmoothScroll";
 import { Preloader } from "./components/Preloader";
 import { ScrollProgress } from "./components/ScrollProgress";
+import ScrollToHash from "./components/ScrollToHash";
 
 const CapabilitiesPage = lazy(() => import("./pages/CapabilitiesPage"));
 const SectorsPage = lazy(() => import("./pages/SectorsPage"));
 const ProofPage = lazy(() => import("./pages/ProofPage"));
-
 const InsightsPage = lazy(() => import("./pages/InsightsPage"));
 const ConnectPage = lazy(() => import("./pages/ConnectPage"));
 
@@ -45,10 +45,12 @@ const AppContent = () => {
     }
   }, [preloaderComplete]);
 
-  // Make sure we scroll to top on location change during page transition
+  // Make sure we scroll to top on location change during page transition (only if no hash)
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.hash]);
 
   const suspenseFallback = (
     <div className="h-screen w-full flex items-center justify-center bg-slate-navy">
@@ -58,6 +60,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToHash />
       <ScrollProgress />
       {!preloaderComplete && <Preloader onComplete={completePreloader} />}
       <SmoothScroll>

@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
-import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 import SectionReveal from "@/components/SectionReveal";
 import capabilitiesHero from "@/assets/capabilities-hero.jpg";
 import {
@@ -24,8 +24,8 @@ const capabilities = [
 const CapabilitiesPage = () => (
   <>
     <Navbar />
+    <Seo title="Capabilities" path="/capabilities" description="ESSGEE offers principal-led advisory services in governance, commercial strategy, delivery leadership, and capital program oversight." />
     <main>
-      <Seo title="Capabilities" path="/capabilities" description="ESSGEE offers principal-led advisory services in governance, commercial strategy, delivery leadership, and capital program oversight." />
       {/* Hero — 30% Slate Navy overlay */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={capabilitiesHero} alt="" className="absolute inset-0 w-full h-full object-cover" />
@@ -55,7 +55,7 @@ const CapabilitiesPage = () => (
                     </div>
                     <p className="text-body-lg text-slate-navy/70 mb-4">{cap.description}</p>
                     <p className="text-slate-navy/60 leading-relaxed">{cap.detail}</p>
-                    <Link to="/connect" className="btn-pop mt-8 inline-block">Discuss This Service</Link>
+                    <Link to="/connect#connect" className="btn-pop mt-8 inline-block">Discuss This Service</Link>
                   </div>
                   <div className={`rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-slate-navy/5 to-deep-azure/10 flex items-center justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                     <cap.icon className="w-24 h-24 text-deep-azure/15" strokeWidth={0.8} />

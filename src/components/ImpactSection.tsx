@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import AnimatedCounter from "./AnimatedCounter";
-import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -36,11 +35,12 @@ const ImpactSection = () => {
           filter: "blur(0px)",
           y: 0,
           duration: 1,
-          ease: "power3.out", // Stately professional feel
+          ease: "power3.out",
           stagger: 0.1,
           scrollTrigger: {
             trigger: gridRef.current,
             start: "top 80%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );
@@ -59,19 +59,15 @@ const ImpactSection = () => {
           </h2>
         </div>
 
-        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {metrics.map((m) => (
-            <div key={m.label} className="impact-card text-center p-8 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div key={m.label} className="impact-card text-center p-6 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="text-white">
                 <AnimatedCounter value={m.value} prefix={m.prefix} suffix={m.suffix} decimals={m.decimals} />
               </div>
               <p className="text-micro uppercase tracking-widest text-white/50 mt-3">{m.label}</p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link to="/connect" className="btn-cta">Discuss Your Project</Link>
         </div>
       </div>
     </section>

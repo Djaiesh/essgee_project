@@ -7,18 +7,18 @@ import { useParallax } from "@/hooks/useParallax";
 const differentiators = [
   {
     icon: Shield,
-    title: "Governance & Assurance",
-    description: "Governance frameworks, executive reporting, assurance reviews and decision support for complex projects and portfolios.",
+    title: "Independent Oversight",
+    description: "Providing objective project reviews, stage-gate assurance, and transparent executive reporting for high-scrutiny portfolios.",
   },
   {
     icon: Target,
-    title: "Commercial & Risk Leadership",
-    description: "Commercial guardrails, risk governance and performance control for bids, projects and operating portfolios.",
+    title: "Commercial Stewardship",
+    description: "Establishing strict commercial guardrails, contract discipline, and risk structures to protect project margins.",
   },
   {
     icon: Eye,
-    title: "Executive Stakeholder Leadership",
-    description: "Board, client, partner, regulator and delivery-team engagement in high-stakes environments.",
+    title: "Principal-Led Engagement",
+    description: "Direct, senior-level leadership at every decision point, ensuring experience-backed guidance without junior delegation.",
   },
 ];
 

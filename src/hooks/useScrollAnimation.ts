@@ -44,8 +44,7 @@ export const useScrollAnimation = ({
           scrollTrigger: {
             trigger: triggerRef.current,
             start,
-            toggleActions: 'play none none none',
-            once: true,
+            toggleActions: 'play reverse play reverse',
           },
         }
       );

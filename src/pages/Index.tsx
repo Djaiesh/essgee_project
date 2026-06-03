@@ -5,11 +5,10 @@ import CapabilitiesSection from "@/components/CapabilitiesSection";
 import SectorsSection from "@/components/SectorsSection";
 import ProofSection from "@/components/ProofSection";
 import ImpactSection from "@/components/ImpactSection";
-import InsightsSection from "@/components/InsightsSection";
 import ClientsSection from "@/components/ClientsSection";
 import SpecialistsSection from "@/components/SpecialistsSection";
-
 import Footer from "@/components/Footer";
+
 import { Helmet } from "react-helmet-async";
 import Seo from "@/components/Seo";
 import { site } from "@/data/siteContent";
@@ -54,8 +53,6 @@ const Index = () => (
       <ImpactSection />
       <ClientsSection />
       <SpecialistsSection />
-      <InsightsSection />
-
     </main>
     <Footer />
   </>

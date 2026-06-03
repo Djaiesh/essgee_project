@@ -14,6 +14,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
@@ -25,6 +26,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       touchMultiplier: 2,
     });
     lenisRef.current = lenis;
+    (window as any).lenis = lenis;
 
     // Connect GSAP ScrollTrigger to Lenis
     lenis.on('scroll', ScrollTrigger.update);
@@ -42,6 +44,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       gsap.ticker.remove(update);
       lenis.destroy();
       lenisRef.current = null;
+      (window as any).lenis = null;
     };
   }, []);
 

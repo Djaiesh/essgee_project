@@ -9,21 +9,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    id: "humelink",
     title: "HumeLink East Transmission Line",
     value: "AUD 1.5B",
     outcome: "Major transmission delivery with strong execution discipline, stakeholder coordination and commercial control.",
   },
   {
+    id: "transport-bids",
     title: "Major Transport Bids and EOIs",
     value: "AUD 500M",
-    outcome: "Bid governance, executive decision support and commercial discipline across competitive delivery environments.",
+    outcome: "Bid governance, executive decision support and commercial discipline across competitive environments.",
   },
   {
+    id: "murrumbidgee",
     title: "Murrumbidgee Irrigation Project",
     value: "AUD 200M",
     outcome: "Governance, delivery oversight and stakeholder coordination in a service-critical water environment.",
   },
   {
+    id: "substations-epc",
     title: "Substations, Renewables and EPC Delivery",
     value: "AUD 115M",
     outcome: "End-to-end commercial and delivery control across high-voltage and renewable generation programs.",
@@ -95,6 +99,7 @@ const ProofSection = () => {
             scrollTrigger: {
               trigger: card,
               start: "top 80%",
+              toggleActions: "play reverse play reverse",
             },
           }
         );
@@ -109,12 +114,12 @@ const ProofSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
-            <p className="proof-text text-micro uppercase tracking-[0.15em] text-vivid-amber mb-4">Delivery & Projects</p>
+            <p className="proof-text text-micro uppercase tracking-[0.15em] text-vivid-amber mb-4">Projects</p>
             <h2 id="proof-heading" className="proof-text text-h2 text-slate-navy mb-6">
               Track Record
             </h2>
             <p className="proof-text text-body-lg text-slate-navy/70 mb-8">
-              Recent projects and pursuits demonstrating executive delivery leadership, bid governance, stakeholder management, and commercial oversight.
+              Recent projects and pursuits demonstrating executive leadership, bid governance, stakeholder management, and commercial oversight.
             </p>
             <div className="proof-text">
               <Link to="/proof" className="btn-cta">View All Projects</Link>
@@ -140,18 +145,18 @@ const ProofSection = () => {
                 <div className="absolute left-[30px] md:left-1/2 w-4 h-4 rounded-full bg-white border-[3px] border-vivid-amber transform -translate-x-1/2 z-10" />
 
                 {/* Card */}
-                <div className={`timeline-card w-[85%] md:w-[45%] pl-12 md:pl-0 ${i % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
-                  <div className="card-lift p-8 rounded-xl bg-card border border-border/50 transition-all duration-500 hover:shadow-[0_20px_40px_-12px_rgba(51,71,91,0.15)] hover:-translate-y-2 relative overflow-hidden group">
+                <Link to={`/proof#${cs.id}`} className={`timeline-card w-[85%] md:w-[45%] pl-12 md:pl-0 ${i % 2 === 0 ? "md:text-left" : "md:text-right"} block group`}>
+                  <div className="card-lift p-8 rounded-xl bg-card border border-border/50 transition-all duration-500 hover:shadow-[0_20px_40px_-12px_rgba(51,71,91,0.15)] hover:border-vivid-amber/30 hover:-translate-y-2 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
-                      <h3 className="font-display text-xl font-semibold text-slate-navy group-hover:text-vivid-amber/80 transition-colors">
+                      <h3 className="font-display text-xl font-semibold text-slate-navy group-hover:text-vivid-amber transition-colors text-left">
                         {cs.title}
                       </h3>
                       <span className="font-display font-bold text-2xl text-deep-azure whitespace-nowrap">{cs.value}</span>
                     </div>
                     <p className="text-slate-navy/60 leading-relaxed text-left">{cs.outcome}</p>
                   </div>
-                </div>
+                </Link>
 
                 <div className="hidden md:block md:w-[45%]" />
               </div>
