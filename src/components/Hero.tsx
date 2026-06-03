@@ -104,7 +104,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover opacity-80 mix-blend-luminosity" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/40" />
       </div>
 
       {/* Layer 2: Midground Elements */}
