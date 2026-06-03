@@ -117,7 +117,7 @@ const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between px-6 h-20" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-3 z-10" aria-label="ESSGEE home">
           <img src={logo} alt="ESSGEE Projects" className="h-12 w-12 rounded-md object-cover border border-white/20 shadow-md" />
-          <span className="text-sm font-bold tracking-[0.16em] text-white">ESSGEE PROJECTS</span>
+          <span className="text-sm font-bold tracking-[0.16em] text-vivid-amber">ESSGEE PROJECTS</span>
         </Link>
 
         {/* Desktop nav */}
