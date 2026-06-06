@@ -61,3 +61,66 @@ export const insights = [
   { title: "Lessons from a Billion-Dollar Rail Program", excerpt: "Key governance lessons from managing one of Australia's largest urban rail extension programs.", date: "October 2025", category: "Case Study", readTime: "12 min read" },
   { title: "The Principal's Role in Project Governance", excerpt: "Why senior-led project management consulting delivers fundamentally different outcomes from team-based resourcing models.", date: "September 2025", category: "Leadership", readTime: "5 min read" },
 ];
+
+export const leadershipDetails = {
+  name: "Satya Gady",
+  title: "Executive Director",
+  email: "satya.gady@essgee.pro",
+  linkedin: "https://www.linkedin.com/in/satya-gady",
+  bio: "Satya Gady is an executive director and infrastructure leader with over 30 years of experience in complex capital delivery, governance, commercial oversight, and operational leadership across Australia and international markets, guiding clients through strategic infrastructure challenges.",
+  credentials: [
+    "MGPM (Torrens University, 2026)",
+    "MBA (Torrens University, 2024)",
+    "Diploma of Project Management (DipProjMngmt, 2013)",
+    "Graduate Certificate in Construction Management (GradCertConstMngmt, Swinburne University, 2011)",
+    "Certificate IV in Occupational Health & Safety (CertIV-OH&S, 2012)",
+    "Diploma in Civil Engineering (DipCivEngg, SBTET, 1995)",
+    "Lead Auditor (Completing Dec 2026)"
+  ],
+  professionalCredentials: [
+    "Chartered Manager (CMgr), IML",
+    "Fellow, Institute of Managers & Leaders (FIML)",
+    "Certified Practising Project Manager (CPPM), AIPM",
+    "Member, AIPM (MAIPM)",
+    "Member, PMI (MPMI)"
+  ]
+};
+
+export const deliveryPillars = [
+  {
+    id: "operations",
+    title: "Australian Operations Establishment & Growth",
+    description: "Established and led Australian EPC operations with full P&L accountability, executive stakeholder engagement, bid and investment governance, and systems aligned to delivery assurance and growth.",
+    detail: "Chaired bid and investment decisions for major pursuits, applying disciplined commercial risk governance, executive decision support, and practical intervention where delivery or margin exposure was emerging. This included building and converting a qualified opportunity pipeline through senior client and partner engagement, while establishing the governance cadence, executive reporting, and operating discipline required to support market entry and growth."
+  },
+  {
+    id: "commercial",
+    title: "Commercial & Governance Leadership",
+    description: "Led forecasting, working capital discipline, executive reporting and KPI-based performance management in delivery environments.",
+    detail: "Managed commercial control and governance visibility for complex projects. Spearheaded cost oversight, program reporting, margin improvement, and strategic cash flow alignment across operating portfolios."
+  },
+  {
+    id: "operating",
+    title: "Acquisition, Integration, and Operating Model Delivery",
+    description: "Designed and embedded operating structures, accountability routines and leadership expectations to improve reporting quality and delivery confidence.",
+    detail: "Led acquisition integration planning and implemented governance, financial, and reporting systems aligned to disciplined operating performance and executive oversight. Designed and embedded accountability routines and leadership expectations to improve reporting quality, organizational readiness, and delivery confidence during periods of growth or change."
+  },
+  {
+    id: "systems",
+    title: "Systems & Compliance",
+    description: "Implemented governance, financial and reporting systems to strengthen operating discipline, executive visibility and compliance.",
+    detail: "Established practical controls, reporting routines, and assurance structures aligned to business performance, risk oversight, and scalable operations. Strengthened compliance and system readiness across growing delivery environments."
+  },
+  {
+    id: "satisfaction",
+    title: "Customer & Stakeholder Satisfaction",
+    description: "Built trusted relationships with clients, partners, regulators, Traditional Owners and delivery teams.",
+    detail: "Led clear communication, responsive leadership, and commercially grounded decision-making. Focused on aligning stakeholder expectations, strengthening confidence, and supporting successful outcomes across complex and high-visibility programs."
+  },
+  {
+    id: "complex",
+    title: "Complex Project & Program Delivery",
+    description: "Directed and supported delivery across civil, utilities, energy, resources and built environment settings.",
+    detail: "Managed remote and interface-heavy programs where execution discipline, approvals, stakeholder coordination, and commercial control were essential. Experience includes major transport and civil works, water and utility programs, renewable and power infrastructure, industrial and mining settings, and large capital developments requiring executive leadership from pursuit through delivery."
+  }
+];

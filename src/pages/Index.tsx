@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OriginSection from "@/components/OriginSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
@@ -43,7 +42,6 @@ const Index = () => (
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
-    <Navbar />
     <main>
       <Hero />
       <OriginSection />

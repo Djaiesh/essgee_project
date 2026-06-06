@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -113,7 +112,6 @@ const ClientLogoPlaceholder = ({ name }: { name: string }) => {
 
 const ProofPage = () => (
   <>
-    <Navbar />
     <Seo title="Projects" path="/proof" description="ESSGEE Projects delivers principal-led governance, commercial oversight, and project support across an AUD 2.7B+ portfolio." />
     <main>
       {/* Hero */}
@@ -189,8 +187,6 @@ const ProofPage = () => (
                         <span className="text-xs text-slate-navy/60">Role: <strong className="text-slate-navy font-semibold">Principal-Led Advisory</strong></span>
                       </div>
                     </div>
-
-                    <Link to="/connect#connect" className="btn-pop inline-block">Discuss This Project</Link>
                   </div>
                 </div>
               </SectionReveal>

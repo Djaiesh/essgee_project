@@ -8,6 +8,7 @@ import socialImg from "@/assets/sector-social.jpg";
 import defenceImg from "@/assets/sector-defence.jpg";
 import urbanImg from "@/assets/sector-urban.png";
 import railImg from "@/assets/sector-rail.jpg";
+import capitalProgramsImg from "@/assets/hero-bg.jpg";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -18,7 +19,7 @@ const sectors = [
   { title: "Built Environment & Property", image: socialImg, href: "/sectors#built-environment" },
   { title: "Defence", image: defenceImg, href: "/sectors#defence" },
   { title: "Urban Rail", image: railImg, href: "/sectors#urban-rail" },
-  { title: "Major Capital Programs", image: transportImg, href: "/sectors#capital-programs" },
+  { title: "Major Capital Programs", image: capitalProgramsImg, href: "/sectors#capital-programs" },
 ];
 
 const SectorsSection = () => {

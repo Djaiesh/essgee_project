@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
 import Seo from "@/components/Seo";
@@ -8,7 +7,6 @@ import insightsHero from "@/assets/insights-hero.png";
 
 const InsightsPage = () => (
   <>
-    <Navbar />
     <Seo title="Insights" path="/insights" description="Perspectives on risk, governance, and infrastructure delivery from ESSGEE Projects." />
     <main>
       {/* Hero */}

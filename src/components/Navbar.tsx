@@ -25,6 +25,8 @@ const NAV_LINKS: NavItem[] = [
       { label: "Bid Strategy & Investment", href: "/capabilities#bid-strategy" },
       { label: "Portfolio & Program Oversight", href: "/capabilities#portfolio-program" },
       { label: "Operating Model & Performance", href: "/capabilities#operating-model" },
+      { label: "Accountability & Ownership", href: "/capabilities#accountability" },
+      { label: "Stakeholder Leadership", href: "/capabilities#stakeholder-leadership" },
       { label: "Delivery Leadership", href: "/capabilities#delivery-leadership" },
     ],
   },
@@ -40,6 +42,10 @@ const NAV_LINKS: NavItem[] = [
       { label: "Urban Rail", href: "/sectors#urban-rail" },
       { label: "Major Capital Programs", href: "/sectors#capital-programs" },
     ],
+  },
+  {
+    label: "Delivery & Governance",
+    href: "/delivery",
   },
   {
     label: "Projects",

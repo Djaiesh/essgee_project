@@ -11,12 +11,14 @@ import SmoothScroll from "./components/SmoothScroll";
 import { Preloader } from "./components/Preloader";
 import { ScrollProgress } from "./components/ScrollProgress";
 import ScrollToHash from "./components/ScrollToHash";
+import Navbar from "./components/Navbar";
 
 const CapabilitiesPage = lazy(() => import("./pages/CapabilitiesPage"));
 const SectorsPage = lazy(() => import("./pages/SectorsPage"));
 const ProofPage = lazy(() => import("./pages/ProofPage"));
 const InsightsPage = lazy(() => import("./pages/InsightsPage"));
 const ConnectPage = lazy(() => import("./pages/ConnectPage"));
+const DeliveryPage = lazy(() => import("./pages/DeliveryPage"));
 
 const queryClient = new QueryClient();
 
@@ -63,6 +65,7 @@ const AppContent = () => {
       <ScrollToHash />
       <ScrollProgress />
       {!preloaderComplete && <Preloader onComplete={completePreloader} />}
+      <Navbar />
       <SmoothScroll>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
@@ -72,6 +75,7 @@ const AppContent = () => {
             <Route path="/proof" element={<PageWrapper><Suspense fallback={suspenseFallback}><ProofPage /></Suspense></PageWrapper>} />
             <Route path="/insights" element={<PageWrapper><Suspense fallback={suspenseFallback}><InsightsPage /></Suspense></PageWrapper>} />
             <Route path="/connect" element={<PageWrapper><Suspense fallback={suspenseFallback}><ConnectPage /></Suspense></PageWrapper>} />
+            <Route path="/delivery" element={<PageWrapper><Suspense fallback={suspenseFallback}><DeliveryPage /></Suspense></PageWrapper>} />
             <Route path="*" element={<PageWrapper><Suspense fallback={suspenseFallback}><NotFound /></Suspense></PageWrapper>} />
           </Routes>
         </AnimatePresence>

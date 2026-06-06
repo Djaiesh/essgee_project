@@ -105,7 +105,8 @@
   /* ── Navigation ── */
   .glass-nav {
     @apply border-b transition-all duration-300;
-    background: hsl(var(--slate-navy));
+    background: hsla(220, 14%, 12%, 0.85);
+    backdrop-filter: blur(12px);
     border-color: hsla(0, 0%, 100%, 0.1);
   }
 

@@ -6,6 +6,7 @@ import { site } from "@/data/siteContent";
 const navigation = [
   ["Capabilities", "/capabilities"],
   ["Sector Experience", "/sectors"],
+  ["Delivery & Governance", "/delivery"],
   ["Projects", "/proof"],
   ["Insights", "/insights"],
   ["Contact", "/connect"],

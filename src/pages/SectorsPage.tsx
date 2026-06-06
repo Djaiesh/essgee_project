@@ -1,7 +1,5 @@
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionReveal from "@/components/SectionReveal";
-import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
 import transportImg from "@/assets/sector-transport.jpg";
 import waterImg from "@/assets/sector-water.jpg";
@@ -10,6 +8,7 @@ import socialImg from "@/assets/sector-social.jpg";
 import defenceImg from "@/assets/sector-defence.jpg";
 import urbanImg from "@/assets/sector-urban.png";
 import railImg from "@/assets/sector-rail.jpg";
+import capitalProgramsImg from "@/assets/hero-bg.jpg";
 
 const sectors = [
   { id: "transport", title: "Transport & Civil Infrastructure", image: transportImg, description: "Transport corridors, civil infrastructure, remote works and complex interface environments.", detail: "Experience includes civil and transport environments where delivery certainty depends on strong planning, stakeholder coordination, approvals management and disciplined commercial control." },
@@ -18,12 +17,11 @@ const sectors = [
   { id: "built-environment", title: "Built Environment & Property", image: socialImg, description: "Commercial developments, large mixed-use environments and complex capital works.", detail: "ESSGEE brings experience from large-scale development and capital project environments where commercial clarity, design coordination, approvals and delivery governance all intersect." },
   { id: "defence", title: "Defence", image: defenceImg, description: "Defence estate, high-security infrastructure, and strategic capital works.", detail: "ESSGEE provides advisory and governance for complex defense infrastructure programs, managing strict compliance, security protocols, multi-stakeholder approvals, and schedule predictability." },
   { id: "urban-rail", title: "Urban Rail", image: railImg, description: "Urban rail systems, heavy and light rail corridor upgrades, and complex authority interfaces.", detail: "Specialized in urban transport construction, operating corridor shut-downs, signaling integration, regulatory safety alignment, and cost controls while navigating complex authority interfaces and community disruptions." },
-  { id: "capital-programs", title: "Major Capital Programs", image: transportImg, description: "Multi-project environments requiring governance cadence, executive visibility and disciplined intervention.", detail: "Where clients are managing multiple workstreams, significant risk exposure or investor and board scrutiny, ESSGEE provides senior support to improve clarity, control and delivery confidence." },
+  { id: "capital-programs", title: "Major Capital Programs", image: capitalProgramsImg, description: "Multi-project environments requiring governance cadence, executive visibility and disciplined intervention.", detail: "Where clients are managing multiple workstreams, significant risk exposure or investor and board scrutiny, ESSGEE provides senior support to improve clarity, control and delivery confidence." },
 ];
 
 const SectorsPage = () => (
   <>
-    <Navbar />
     <Seo title="Sector Experience" path="/sectors" description="ESSGEE brings experience across transport, water, utilities, energy, resources, the built environment, defense, urban rail, and major capital programs." />
     <main>
       {/* Hero */}
@@ -52,7 +50,6 @@ const SectorsPage = () => (
                   <h2 className="text-h2 text-slate-navy mb-4">{sector.title}</h2>
                   <p className="text-body-lg text-slate-navy/70 mb-4">{sector.description}</p>
                   <p className="text-slate-navy/60 leading-relaxed">{sector.detail}</p>
-                  <Link to="/connect#connect" className="btn-pop mt-8 inline-block">Discuss This Sector</Link>
                 </div>
               </div>
             </SectionReveal>
