@@ -7,17 +7,17 @@ import insightsHero from "@/assets/insights-hero.png";
 
 const InsightsPage = () => (
   <>
-    <Seo title="Insights" path="/insights" description="Perspectives on risk, governance, and infrastructure delivery from ESSGEE Projects." />
+    <Seo title="Insights" path="/insights" description="Perspectives on strategy, governance, PMO/PfMO, project delivery, sustainability and leadership from ESSGEE Projects." />
     <main>
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <img src={insightsHero} alt="Architectural design office" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={insightsHero} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-slate-navy/85" />
         <div className="relative z-10 text-center px-6">
           <p className="text-micro uppercase tracking-[0.2em] text-teal-accent mb-4">Knowledge</p>
           <h1 className="text-hero text-white mb-6">Insights</h1>
           <p className="text-body-lg text-white/70 max-w-2xl mx-auto">
-            Perspectives on risk, governance, and infrastructure delivery - from 30+ years at the coalface.
+            Perspectives on strategy, governance, project delivery and sustainable outcomes.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ const InsightsPage = () => (
               <article className="card-lift group p-8 rounded-xl h-full flex flex-col">
                 <div className="flex gap-3 mb-4 text-micro">
                   <span className="uppercase text-teal-accent">{article.category}</span>
-                  <span className="text-slate-navy/35">·</span>
+                  <span className="text-slate-navy/35">&middot;</span>
                   <span className="text-slate-navy/45">{article.readTime}</span>
                 </div>
                 <h2 className="font-display text-xl font-semibold text-slate-navy mb-3 group-hover:text-deep-azure transition-colors">

@@ -25,4 +25,12 @@ dist-ssr
  
 *.txt
 *.bak
+
+# Environment Variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+.env.development

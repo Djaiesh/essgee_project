@@ -7,19 +7,16 @@ import resourcesImg from "@/assets/sector-resources.jpg";
 import socialImg from "@/assets/sector-social.jpg";
 import defenceImg from "@/assets/sector-defence.jpg";
 import urbanImg from "@/assets/sector-urban.png";
-import railImg from "@/assets/sector-rail.jpg";
-import capitalProgramsImg from "@/assets/hero-bg.jpg";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const sectors = [
-  { title: "Transport & Civil Infrastructure", image: transportImg, href: "/sectors#transport" },
-  { title: "Water & Utilities", image: waterImg, href: "/sectors#water" },
-  { title: "Energy, Resources & Industrial", image: resourcesImg, href: "/sectors#energy-resources" },
-  { title: "Built Environment & Property", image: socialImg, href: "/sectors#built-environment" },
-  { title: "Defence", image: defenceImg, href: "/sectors#defence" },
-  { title: "Urban Rail", image: railImg, href: "/sectors#urban-rail" },
-  { title: "Major Capital Programs", image: capitalProgramsImg, href: "/sectors#capital-programs" },
+const sectorSlides = [
+  { title: "Infrastructure", image: transportImg, href: "/sectors#infrastructure" },
+  { title: "Construction", image: urbanImg, href: "/sectors#construction" },
+  { title: "Property & Development", image: socialImg, href: "/sectors#property-development" },
+  { title: "Energy & Utilities", image: waterImg, href: "/sectors#energy-utilities" },
+  { title: "Industrial & Resources", image: resourcesImg, href: "/sectors#industrial-resources" },
+  { title: "Government & Public Sector", image: defenceImg, href: "/sectors#government" },
 ];
 
 const SectorsSection = () => {
@@ -53,7 +50,7 @@ const SectorsSection = () => {
 
         <div ref={carouselRef} className="carousel-reveal">
           <GlassCarousel>
-            {sectors.map((sector) => (
+            {sectorSlides.map((sector) => (
               <Link key={sector.title} to={sector.href} className="group block relative rounded-2xl overflow-hidden aspect-[16/10] border border-white/10 shadow-2xl">
                 <img
                   src={sector.image}

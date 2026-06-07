@@ -145,12 +145,14 @@
 
   /* ── Premium Cards (Editorial Minimal) ── */
   .card-lift {
-    @apply transition-all duration-300 ease-out border border-border bg-white;
+    @apply transition-all duration-500 ease-out border border-border bg-white;
+    box-shadow: 0 4px 20px -12px hsla(220, 14%, 12%, 0.05);
   }
 
   .card-lift:hover {
-    transform: translateY(-4px);
-    border-color: hsl(var(--slate-navy));
+    transform: translateY(-6px);
+    border-color: hsl(var(--slate-navy) / 0.3);
+    box-shadow: 0 20px 40px -16px hsla(220, 14%, 12%, 0.12);
   }
 
   /* ── Links / Underline ── */
@@ -181,7 +183,8 @@
   .btn-cta:hover {
     background: transparent;
     color: hsl(var(--slate-navy));
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 24px -10px hsl(var(--slate-navy) / 0.3);
   }
 
   .btn-pop {
@@ -195,7 +198,8 @@
     background: hsl(var(--slate-navy));
     color: white;
     border-color: hsl(var(--slate-navy));
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 24px -10px hsl(var(--vivid-amber) / 0.4);
   }
 
   .btn-outline {
@@ -209,7 +213,8 @@
     background: white;
     color: hsl(var(--slate-navy));
     border-color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 24px -10px rgba(255, 255, 255, 0.2);
   }
 
   /* ── Counter ── */

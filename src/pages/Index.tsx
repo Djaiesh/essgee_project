@@ -2,10 +2,7 @@ import Hero from "@/components/Hero";
 import OriginSection from "@/components/OriginSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
 import SectorsSection from "@/components/SectorsSection";
-import ProofSection from "@/components/ProofSection";
-import ImpactSection from "@/components/ImpactSection";
-import ClientsSection from "@/components/ClientsSection";
-import SpecialistsSection from "@/components/SpecialistsSection";
+import InsightsSection from "@/components/InsightsSection";
 import Footer from "@/components/Footer";
 
 import { Helmet } from "react-helmet-async";
@@ -16,7 +13,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "ESSGEE Projects",
-  "description": "Principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges.",
+  "description": "ESSGEE Projects is an integrated strategy, development and delivery advisory practice supporting organisations across Australia, India and the Asia-Pacific region.",
   "url": site.url,
   "address": {
     "@type": "PostalAddress",
@@ -27,18 +24,18 @@ const jsonLd = {
   "founder": {
     "@type": "Person",
     "name": "Satya Gady",
-    "jobTitle": "Executive Director"
+    "jobTitle": "Founder & Principal Consultant"
   },
-  "areaServed": ["Australia", "International"],
+  "areaServed": ["Australia", "India", "Asia-Pacific"],
   "telephone": site.phoneDisplay,
   "email": site.email,
-  "serviceType": ["Governance & Assurance", "Commercial & Risk Leadership", "Bid Strategy & Investment Support", "Portfolio & Program Oversight", "Delivery Leadership"],
+  "serviceType": ["Strategic Advisory", "Governance", "PMO/PfMO", "Project Management", "Program Management", "Portfolio Management", "Delivery Leadership"],
   "sameAs": ["https://www.linkedin.com/in/satya-gady"]
 };
 
 const Index = () => (
   <>
-    <Seo title="ESSGEE" description="ESSGEE provides principal-led advisory support for organisations managing complex infrastructure, capital delivery and governance challenges." />
+    <Seo title="ESSGEE" description="ESSGEE Projects is an integrated strategy, development and delivery advisory practice. Bridging Strategy, Governance and Delivery across Australia, India and the Asia-Pacific region." />
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
@@ -47,10 +44,7 @@ const Index = () => (
       <OriginSection />
       <CapabilitiesSection />
       <SectorsSection />
-      <ProofSection />
-      <ImpactSection />
-      <ClientsSection />
-      <SpecialistsSection />
+      <InsightsSection />
     </main>
     <Footer />
   </>

@@ -11,7 +11,7 @@ const UserAvatarPlaceholder = () => (
 );
 
 const SpecialistsSection = () => (
-  <section className="section-light section-padding scroll-mt-20" aria-labelledby="specialists-heading">
+  <section className="section-cream section-padding scroll-mt-20" aria-labelledby="specialists-heading">
     <div className="container mx-auto px-6">
       <SectionReveal>
         <p className="text-micro uppercase tracking-[0.2em] text-teal-accent mb-4">Our Team</p>

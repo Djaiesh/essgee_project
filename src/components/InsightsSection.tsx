@@ -17,7 +17,7 @@ const InsightsSection = () => {
         <div className="text-center mb-16">
           <p className="insights-text text-micro uppercase tracking-[0.15em] text-teal-accent mb-4">Knowledge</p>
           <h2 id="insights-heading" className="insights-text text-h2 text-slate-navy">Insights</h2>
-          <p className="insights-text mt-4 text-body-lg text-slate-navy/60">Perspectives on risk, governance, and infrastructure delivery - from 30+ years at the coalface.</p>
+          <p className="insights-text mt-4 text-body-lg text-slate-navy/60">Perspectives on strategy, governance, project delivery and sustainable outcomes.</p>
         </div>
         <div ref={gridRef} className="grid md:grid-cols-3 gap-8">
           {insights.slice(0, 3).map((article) => (

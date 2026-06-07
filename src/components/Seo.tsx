@@ -10,7 +10,7 @@ interface SeoProps {
 
 const Seo = ({ title, description, path = "", noIndex = false }: SeoProps) => {
   const url = `${site.url}${path}`;
-  const fullTitle = title === site.shortName ? "ESSGEE | Where Strategy Meets Delivery" : `${title} | ESSGEE`;
+  const fullTitle = title === site.shortName ? "ESSGEE Projects | Sustainability Through Strategy" : `${title} | ESSGEE Projects`;
 
   return (
     <Helmet>

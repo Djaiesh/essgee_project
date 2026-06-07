@@ -4,12 +4,12 @@ import logo from "@/assets/essgee_logo.jpeg";
 import { site } from "@/data/siteContent";
 
 const navigation = [
-  ["Capabilities", "/capabilities"],
-  ["Sector Experience", "/sectors"],
-  ["Delivery & Governance", "/delivery"],
-  ["Projects", "/proof"],
+  ["About", "/about"],
+  ["Services", "/services"],
+  ["Sectors", "/sectors"],
+  ["Founder", "/founder"],
   ["Insights", "/insights"],
-  ["Contact", "/connect"],
+  ["Contact", "/contact"],
 ];
 
 const Footer = () => (
@@ -21,8 +21,9 @@ const Footer = () => (
             <img src={logo} alt="" className="h-20 w-20 rounded-lg object-cover border border-white/10 shadow-lg" />
             <span className="font-display text-2xl font-bold tracking-wide text-vivid-amber">ESSGEE PROJECTS</span>
           </Link>
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/50">Principal-led advisory support for complex infrastructure, capital delivery and governance challenges.</p>
-          <a href={site.capabilityStatement} download className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-accent hover:text-white"><Download className="h-4 w-4" />Download Capability Statement</a>
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/50">ESSGEE Projects supports organisations in transforming strategic intent into sustainable business and project outcomes through integrated advisory services spanning strategy, governance and delivery.</p>
+          <p className="mt-3 text-sm font-semibold text-vivid-amber italic">Sustainability Through Strategy!</p>
+          <a href={site.capabilityStatement} download className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-accent hover:text-white transition-colors"><Download className="h-4 w-4" />Download Capability Statement</a>
         </div>
         <div className="md:col-span-3">
           <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/35">Navigation</p>
@@ -38,7 +39,7 @@ const Footer = () => (
           </ul>
         </div>
       </div>
-      <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/30">© {new Date().getFullYear()} ESSGEE Projects. All rights reserved.</div>
+      <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/30">&copy; {new Date().getFullYear()} ESSGEE Projects. All rights reserved.</div>
     </div>
   </footer>
 );

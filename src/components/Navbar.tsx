@@ -17,52 +17,38 @@ interface NavItem {
 
 const NAV_LINKS: NavItem[] = [
   {
-    label: "Capabilities",
-    href: "/capabilities",
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Services",
+    href: "/services",
     subs: [
-      { label: "Governance & Assurance", href: "/capabilities#governance-assurance" },
-      { label: "Commercial & Risk Leadership", href: "/capabilities#commercial-risk" },
-      { label: "Bid Strategy & Investment", href: "/capabilities#bid-strategy" },
-      { label: "Portfolio & Program Oversight", href: "/capabilities#portfolio-program" },
-      { label: "Operating Model & Performance", href: "/capabilities#operating-model" },
-      { label: "Accountability & Ownership", href: "/capabilities#accountability" },
-      { label: "Stakeholder Leadership", href: "/capabilities#stakeholder-leadership" },
-      { label: "Delivery Leadership", href: "/capabilities#delivery-leadership" },
+      { label: "Strategy", href: "/services#strategy" },
+      { label: "Governance", href: "/services#governance" },
+      { label: "Delivery", href: "/services#delivery" },
     ],
   },
   {
-    label: "Sector Experience",
+    label: "Sectors",
     href: "/sectors",
     subs: [
-      { label: "Transport & Civil", href: "/sectors#transport" },
-      { label: "Water & Utilities", href: "/sectors#water" },
-      { label: "Energy, Resources & Industrial", href: "/sectors#energy-resources" },
-      { label: "Built Environment & Property", href: "/sectors#built-environment" },
-      { label: "Defence", href: "/sectors#defence" },
-      { label: "Urban Rail", href: "/sectors#urban-rail" },
-      { label: "Major Capital Programs", href: "/sectors#capital-programs" },
+      { label: "Infrastructure", href: "/sectors#infrastructure" },
+      { label: "Construction", href: "/sectors#construction" },
+      { label: "Property & Development", href: "/sectors#property-development" },
+      { label: "Energy & Utilities", href: "/sectors#energy-utilities" },
+      { label: "Industrial & Resources", href: "/sectors#industrial-resources" },
+      { label: "Government & Public Sector", href: "/sectors#government" },
     ],
   },
   {
-    label: "Delivery & Governance",
-    href: "/delivery",
-  },
-  {
-    label: "Projects",
-    href: "/proof",
-    subs: [
-      { label: "HumeLink East", href: "/proof#humelink" },
-      { label: "Transport Bids", href: "/proof#transport-bids" },
-      { label: "Murrumbidgee Irrigation", href: "/proof#murrumbidgee" },
-      { label: "Renewables & EPC", href: "/proof#substations-epc" },
-      { label: "AWS Data Centre", href: "/proof#it-building-aws" },
-      { label: "Carmichael Mine", href: "/proof#carmichael" },
-    ]
+    label: "Founder",
+    href: "/founder",
   },
   { label: "Insights", href: "/insights" },
   {
     label: "Contact",
-    href: "/connect",
+    href: "/contact",
   },
 ];
 

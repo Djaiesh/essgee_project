@@ -13,12 +13,12 @@ import { ScrollProgress } from "./components/ScrollProgress";
 import ScrollToHash from "./components/ScrollToHash";
 import Navbar from "./components/Navbar";
 
-const CapabilitiesPage = lazy(() => import("./pages/CapabilitiesPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
 const SectorsPage = lazy(() => import("./pages/SectorsPage"));
-const ProofPage = lazy(() => import("./pages/ProofPage"));
+const FounderPage = lazy(() => import("./pages/FounderPage"));
 const InsightsPage = lazy(() => import("./pages/InsightsPage"));
-const ConnectPage = lazy(() => import("./pages/ConnectPage"));
-const DeliveryPage = lazy(() => import("./pages/DeliveryPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const queryClient = new QueryClient();
 
@@ -39,7 +39,6 @@ const AppContent = () => {
   const completePreloader = useCallback(() => setPreloaderComplete(true), []);
 
   useEffect(() => {
-    // Prevent scrolling while preloader is active, by hiding body overflow.
     if (!preloaderComplete) {
       document.body.style.overflow = "hidden";
     } else {
@@ -47,7 +46,6 @@ const AppContent = () => {
     }
   }, [preloaderComplete]);
 
-  // Make sure we scroll to top on location change during page transition (only if no hash)
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo(0, 0);
@@ -70,12 +68,12 @@ const AppContent = () => {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageWrapper><Suspense fallback={suspenseFallback}><Index /></Suspense></PageWrapper>} />
-            <Route path="/capabilities" element={<PageWrapper><Suspense fallback={suspenseFallback}><CapabilitiesPage /></Suspense></PageWrapper>} />
+            <Route path="/about" element={<PageWrapper><Suspense fallback={suspenseFallback}><AboutPage /></Suspense></PageWrapper>} />
+            <Route path="/services" element={<PageWrapper><Suspense fallback={suspenseFallback}><ServicesPage /></Suspense></PageWrapper>} />
             <Route path="/sectors" element={<PageWrapper><Suspense fallback={suspenseFallback}><SectorsPage /></Suspense></PageWrapper>} />
-            <Route path="/proof" element={<PageWrapper><Suspense fallback={suspenseFallback}><ProofPage /></Suspense></PageWrapper>} />
+            <Route path="/founder" element={<PageWrapper><Suspense fallback={suspenseFallback}><FounderPage /></Suspense></PageWrapper>} />
             <Route path="/insights" element={<PageWrapper><Suspense fallback={suspenseFallback}><InsightsPage /></Suspense></PageWrapper>} />
-            <Route path="/connect" element={<PageWrapper><Suspense fallback={suspenseFallback}><ConnectPage /></Suspense></PageWrapper>} />
-            <Route path="/delivery" element={<PageWrapper><Suspense fallback={suspenseFallback}><DeliveryPage /></Suspense></PageWrapper>} />
+            <Route path="/contact" element={<PageWrapper><Suspense fallback={suspenseFallback}><ContactPage /></Suspense></PageWrapper>} />
             <Route path="*" element={<PageWrapper><Suspense fallback={suspenseFallback}><NotFound /></Suspense></PageWrapper>} />
           </Routes>
         </AnimatePresence>

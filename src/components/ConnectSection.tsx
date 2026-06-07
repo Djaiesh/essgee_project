@@ -1,6 +1,6 @@
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Download, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { site } from "@/data/siteContent";
 
@@ -47,16 +47,15 @@ const ConnectSection = () => {
     <section ref={sectionRef} id="connect" className="section-dark section-padding overflow-hidden" aria-labelledby="connect-heading">
       <div className="container mx-auto px-6">
         <p className="connect-title text-micro uppercase tracking-[0.2em] text-teal-accent mb-4">Direct Enquiry</p>
-        <h2 id="connect-heading" className="connect-title text-h2 text-white mb-4">Start a Confidential Discussion</h2>
+        <h2 id="connect-heading" className="connect-title text-h2 text-white mb-4">Let's Start a Conversation</h2>
         <p className="connect-title text-body-lg text-white/60 mb-14">Every enquiry is handled directly by Satya Gady. No intermediaries, no delays.</p>
         <div className="grid lg:grid-cols-2 gap-16">
           <div ref={infoRef} className="space-y-7">
-            <div className="connect-info"><h3 className="font-display text-2xl text-white">Satya Gady</h3><p className="text-teal-accent">Executive Director</p></div>
+            <div className="connect-info"><h3 className="font-display text-2xl text-white">Satya Gady</h3><p className="text-teal-accent">Founder & Principal Consultant</p></div>
             <a href={site.phoneHref} className="connect-info contact-link"><Phone /><span>{site.phoneDisplay}</span></a>
             <a href={`mailto:${site.email}`} className="connect-info contact-link"><Mail /><span>{site.email}</span></a>
             <div className="connect-info contact-link"><MapPin /><span>{site.location}</span></div>
             <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="connect-info contact-link"><Linkedin /><span>View LinkedIn Profile</span></a>
-            <a href={site.capabilityStatement} download className="connect-info btn-outline inline-flex gap-2"><Download className="h-4 w-4" />Download Capability Statement</a>
           </div>
           <div ref={formRef}>
             {status === "success" ? (

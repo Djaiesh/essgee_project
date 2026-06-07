@@ -59,7 +59,7 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
             ))}
           </div>
           <div ref={taglineText} className="mt-6 font-display text-vivid-amber text-sm sm:text-base md:text-xl font-light tracking-widest uppercase opacity-0">
-            Where Strategy Meets Delivery.
+            Sustainability Through Strategy!
           </div>
         </div>
       </div>

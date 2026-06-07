@@ -1,26 +1,11 @@
 import { useRef } from "react";
 import aboutBg from "@/assets/about-bg.jpg";
-import { Shield, Target, Eye } from "lucide-react";
+import { Layers, Compass, Leaf, BarChart3 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax } from "@/hooks/useParallax";
+import { whyEssgee } from "@/data/siteContent";
 
-const differentiators = [
-  {
-    icon: Shield,
-    title: "Independent Oversight",
-    description: "Providing objective project reviews, stage-gate assurance, and transparent executive reporting for high-scrutiny portfolios.",
-  },
-  {
-    icon: Target,
-    title: "Commercial Stewardship",
-    description: "Establishing strict commercial guardrails, contract discipline, and risk structures to protect project margins.",
-  },
-  {
-    icon: Eye,
-    title: "Principal-Led Engagement",
-    description: "Direct, senior-level leadership at every decision point, ensuring experience-backed guidance without junior delegation.",
-  },
-];
+const iconMap = [Layers, Compass, Leaf, BarChart3];
 
 const OriginSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -28,7 +13,6 @@ const OriginSection = () => {
   const imgRef = useRef<HTMLImageElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
-  // Staggered text reveal for about content
   useScrollAnimation({
     triggerRef: sectionRef,
     childrenSelector: ".about-reveal",
@@ -36,7 +20,6 @@ const OriginSection = () => {
     y: 30,
   });
 
-  // Stagger reveal for the image wrapper
   useScrollAnimation({
     triggerRef: sectionRef,
     childrenSelector: ".about-img-reveal",
@@ -44,7 +27,6 @@ const OriginSection = () => {
     y: 40,
   });
 
-  // Stagger for differentiators
   useScrollAnimation({
     triggerRef: cardsRef,
     childrenSelector: ".about-card-reveal",
@@ -52,7 +34,6 @@ const OriginSection = () => {
     y: 40,
   });
 
-  // Parallax for the background image inside the wrapper
   useParallax({
     triggerRef: sectionRef,
     targetRef: imgRef,
@@ -66,15 +47,15 @@ const OriginSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div>
-            <p className="about-reveal text-micro uppercase tracking-[0.15em] text-deep-azure mb-4">About ESSGEE</p>
+            <p className="about-reveal text-micro uppercase tracking-[0.15em] text-deep-azure mb-4">Who We Are</p>
             <h2 id="about-heading" className="about-reveal text-h2 text-slate-navy mb-6">
-              Principal-Led Advisory for Complex Capital Delivery
+              Bridging Strategy, Governance and Delivery
             </h2>
             <p className="about-reveal text-body-lg text-slate-navy/70 mb-8">
-              ESSGEE is a principal-led advisory practice established by Satya Gady to support clients navigating complex capital delivery, governance, commercial risk and executive decision-making. Drawing on experience across infrastructure, utilities, energy, resources and the built environment, ESSGEE works as an extension of client leadership teams.
+              ESSGEE Projects supports organisations throughout the business and project lifecycle, helping bridge the gap between strategic intent and successful delivery.
             </p>
             <p className="about-reveal text-body-lg text-slate-navy/60">
-              Engagements are principal-led, commercially grounded, and shaped by the realities of each program, portfolio, or investment decision. ESSGEE brings practical judgement, executive communication and decision support in environments where delivery complexity, stakeholder visibility and commercial exposure are high.
+              By combining commercial insight, governance excellence and practical delivery experience, we assist clients in establishing direction, strengthening capability and achieving sustainable outcomes.
             </p>
           </div>
 
@@ -83,7 +64,7 @@ const OriginSection = () => {
             <img
               ref={imgRef}
               src={aboutBg}
-              alt="Executive boardroom representing strategic project oversight"
+              alt="Strategic advisory and project governance"
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -91,15 +72,18 @@ const OriginSection = () => {
           </div>
         </div>
 
-        {/* Differentiators */}
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 mt-24">
-          {differentiators.map((d, i) => (
-            <div key={d.title} className="about-card-reveal card-lift p-8 rounded-lg bg-card border border-border/50">
-              <d.icon className="w-10 h-10 text-deep-azure mb-5" strokeWidth={1.5} />
-              <h3 className="text-h3 text-slate-navy mb-3">{d.title}</h3>
-              <p className="text-slate-navy/60 leading-relaxed">{d.description}</p>
-            </div>
-          ))}
+        {/* Why ESSGEE Projects */}
+        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
+          {whyEssgee.map((d, i) => {
+            const Icon = iconMap[i];
+            return (
+              <div key={d.title} className="about-card-reveal card-lift p-8 rounded-lg bg-card border border-border/50">
+                <Icon className="w-10 h-10 text-deep-azure mb-5" strokeWidth={1.5} />
+                <h3 className="text-h3 text-slate-navy mb-3">{d.title}</h3>
+                <p className="text-slate-navy/60 leading-relaxed">{d.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
